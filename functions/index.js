@@ -1,9 +1,23 @@
 const functions = require('firebase-functions');
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+const app = require('express')();
+const cors = require('cors');
+app.use(cors());
+
+const {
+  loginUser,
+  signUpUser,
+  getUserDetails,
+  updateUserDetails,
+  uploadProfilePhoto,
+} = require('./api/users');
+const auth = require('./util/auth');
+
+// User Routes
+app.post('/login', loginUser);
+app.post('/signup', signUpUser);
+app.get('/user', auth, getUserDetails);
+app.post('/user', auth, updateUserDetails);
+app.post('/user/image', auth, uploadProfilePhoto);
+
+exports.api = functions.https.onRequest(app);

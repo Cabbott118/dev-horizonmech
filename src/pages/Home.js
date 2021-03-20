@@ -19,9 +19,9 @@ export default function Home() {
       alignItems='center'
       className={classes.homePage}
     >
-      <Grid item>
-        <Typography variant='h1' color='primary' align='center'>
-          Home Page
+      <Grid item style={{ paddingTop: '60px' }}>
+        <Typography variant='h6' align='center'>
+          Hey, top color (blue) is #5085a5 and bottom color (gray) is #f7f9fb
         </Typography>
       </Grid>
     </Grid>

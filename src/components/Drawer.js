@@ -13,21 +13,25 @@ import MuiDrawer from '@material-ui/core/Drawer';
 
 const useStyles = makeStyles((theme) => ({
   list: {
-    width: 250,
-    height: '100vh',
-    // backgroundColor: theme.palette.primary.dark,
-    background: '#1b1c2c',
+    // Remove below comments and change all occurances
+    // of 'top' to 'right'
+    // width: 250,
+    // height: '100vh',
+    background: '#f7f9fb',
   },
   linkText: {
     textDecoration: 'none',
     textTransform: 'none',
-    color: theme.palette.secondary.contrastText,
+    color: theme.palette.primary.main,
+  },
+  icon: {
+    color: theme.palette.primary.contrastText,
   },
 }));
 
 const Drawer = ({ navLinks }) => {
   const classes = useStyles();
-  const [state, setState] = useState({ right: false });
+  const [state, setState] = useState({ top: false });
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event.type === 'keydown' &&
@@ -62,16 +66,16 @@ const Drawer = ({ navLinks }) => {
       <IconButton
         edge='start'
         aria-label='menu'
-        onClick={toggleDrawer('right', true)}
+        onClick={toggleDrawer('top', true)}
       >
-        <Menu color='primary' />
+        <Menu color='primary' className={classes.icon} />
       </IconButton>
       <MuiDrawer
-        anchor='right'
-        open={state.right}
-        onClose={toggleDrawer('right', false)}
+        anchor='top'
+        open={state.top}
+        onClose={toggleDrawer('top', false)}
       >
-        {sideDrawerList('right')}
+        {sideDrawerList('top')}
       </MuiDrawer>
     </React.Fragment>
   );

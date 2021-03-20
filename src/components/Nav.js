@@ -28,13 +28,19 @@ const useStyles = makeStyles((theme) => ({
   linkText: {
     textDecoration: 'none',
     textTransform: 'none',
-    color: theme.palette.primary.main,
+    color: theme.palette.primary.contrastText,
   },
 }));
 
 export default function Nav() {
   const classes = useStyles();
-  const navLinks = [{ title: 'Home', path: '/' }];
+  const navLinks = [
+    { title: 'Home', path: '/' },
+    {
+      title: 'Contact Us',
+      path: '/contact-us',
+    },
+  ];
 
   return (
     <Fragment>
@@ -47,8 +53,13 @@ export default function Nav() {
           <Toolbar id='back-to-top-anchor'>
             <Container maxWidth='md' className={classes.navDisplayFlex}>
               <Link to={'/'}>
-                <IconButton edge='start' color='primary' aria-label='home'>
-                  <Home color='primary' />
+                <IconButton
+                  edge='start'
+                  color='primary'
+                  aria-label='home'
+                  style={{ paddingTop: '16px' }}
+                >
+                  <Home color='primary' className={classes.linkText} />
                 </IconButton>
               </Link>
               <Hidden smDown>
