@@ -22,6 +22,7 @@ import Nav from './components/Nav';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
 import FourOhFour from './pages/FourOhFour';
 
 // Utility
@@ -52,6 +53,7 @@ export default function App() {
               <Route exact path='/' component={Home} />
               <Route exact path='/signup' component={Signup} />
               <Route exact path='/login' component={Login} />
+              <Route exact path='/dashboard' component={Dashboard} />
               <Route path='/404' component={FourOhFour} />
               <Redirect to='/404' />
             </Switch>

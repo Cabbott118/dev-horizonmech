@@ -18,13 +18,43 @@ export default {
       minHeight: '100vh',
       backgroundImage: 'linear-gradient(180deg, #5085a5, #f7f9fb)',
     },
+    dashboardPage: {
+      background: '#2a262c',
+      minHeight: '100vh',
+    },
     fourOhFourPage: {
       // background: '#eceff1',
       background: '#2a262c',
       minHeight: '100vh',
     },
+    typography: {
+      useNextVariants: true,
+    },
+    paper: {
+      padding: 20,
+    },
+    form: {
+      textAlign: 'center',
+    },
+    pageTitle: {
+      margin: '10px auto 10px auto',
+    },
+    textField: {
+      margin: '10px auto 10px auto',
+    },
     button: {
+      marginTop: 20,
+      marginBottom: 20,
+      position: 'relative',
       textTransform: 'none',
+    },
+    customError: {
+      color: 'red',
+      fontSize: '0.8rem',
+      marginTop: 5,
+    },
+    progress: {
+      position: 'absolute',
     },
   },
 };

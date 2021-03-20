@@ -29,29 +29,6 @@ export default function FourOhFour() {
         <Typography variant='h1' color='primary' align='center'>
           Error Code: 404
         </Typography>
-        <Grid
-          container
-          spacing={2}
-          direction='row'
-          justify='center'
-          alignItems='center'
-        >
-          <Grid item>
-            <Typography variant='h2' color='secondary'>
-              4
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant='h2' color='secondary'>
-              0
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant='h2' color='secondary'>
-              4
-            </Typography>
-          </Grid>
-        </Grid>
       </Grid>
       <Grid item>
         <Button
