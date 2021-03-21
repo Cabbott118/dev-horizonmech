@@ -58,7 +58,7 @@ export class Login extends Component {
     } = this.props;
     const { errors } = this.state;
     return (
-      <div style={{ margin: '30px' }}>
+      <div className={classes.loginPage}>
         <Grid container className={classes.form}>
           <Grid item sm />
           <Grid item sm>

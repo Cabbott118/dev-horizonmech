@@ -31,7 +31,7 @@ exports.loginUser = (request, response) => {
     });
 };
 
-const noImg = 'userStockImg.JPG';
+const noImg = 'userStockImage.JPG';
 
 exports.signUpUser = (request, response) => {
   const newUser = {

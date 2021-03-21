@@ -26,7 +26,7 @@ export default function FourOhFour() {
       className={classes.fourOhFourPage}
     >
       <Grid item>
-        <Typography variant='h1' color='primary' align='center'>
+        <Typography variant='h3' color='primary' align='center'>
           Error Code: 404
         </Typography>
       </Grid>

@@ -20,9 +20,7 @@ export default function Home() {
       className={classes.homePage}
     >
       <Grid item style={{ paddingTop: '60px' }}>
-        <Typography variant='h6' align='center'>
-          Hey, top color (blue) is #5085a5 and bottom color (gray) is #f7f9fb
-        </Typography>
+        <Typography variant='h6' align='center'></Typography>
       </Grid>
     </Grid>
   );

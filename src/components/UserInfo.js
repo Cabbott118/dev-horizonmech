@@ -18,8 +18,8 @@ const UserInfo = (props) => {
   return (
     <Grid item>
       <Paper variant='outlined' className={classes.paper}>
-        <Typography variant='h5' className={classes.pageTitle}>
-          User Info
+        <Typography variant='h5' align='center' className={classes.pageTitle}>
+          Admin Info
         </Typography>
         <Grid
           container

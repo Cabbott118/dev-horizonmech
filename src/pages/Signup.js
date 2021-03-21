@@ -60,14 +60,13 @@ export class Signup extends Component {
   };
 
   render() {
-    console.log(this.state);
     const {
       classes,
       UI: { loading },
     } = this.props;
     const { errors } = this.state;
     return (
-      <div style={{ margin: '30px' }}>
+      <div className={classes.registerPage}>
         <Grid container className={classes.form}>
           <Grid item sm />
           <Grid item sm>

@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 // Components
 import LoadingSpinner from '../components/LoadingSpinner';
 import UserInfo from '../components/UserInfo';
+import DataTable from '../components/DataTable';
 
 // MUI
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 
 // Redux
 import { connect } from 'react-redux';
@@ -51,10 +51,11 @@ export class Dashboard extends Component {
         className={classes.dashboardPage}
       >
         {userMarkUp}
+        <DataTable />
         <Button
           className={classes.button}
           variant='contained'
-          color='secondary'
+          color='primary'
           onClick={this.handleLogout}
         >
           Logout

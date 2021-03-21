@@ -37,9 +37,11 @@ export default function Nav() {
   const navLinks = [
     { title: 'Home', path: '/' },
     {
-      title: 'Contact Us',
+      title: 'Contact Us (Force 404)',
       path: '/contact-us',
     },
+    { title: 'Login', path: '/login' },
+    { title: 'Sign Up', path: '/signup' },
   ];
 
   return (
@@ -85,11 +87,11 @@ export default function Nav() {
         </AppBar>
       </HideOnScroll>
 
-      <BackToTop>
+      {/* <BackToTop>
         <Fab color='primary' size='large' aria-label='scroll back to top'>
           <KeyboardArrowUp />
         </Fab>
-      </BackToTop>
+      </BackToTop> */}
     </Fragment>
   );
 }
