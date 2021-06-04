@@ -29,4 +29,5 @@ const BackToTop = ({ children }) => {
     </Zoom>
   );
 };
+
 export default BackToTop;

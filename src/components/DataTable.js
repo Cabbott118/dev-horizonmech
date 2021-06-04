@@ -104,7 +104,7 @@ function EnhancedTableHead(props) {
   return (
     <TableHead>
       <TableRow>
-        <TableCell padding='checkbox'>
+        <TableCell padding="checkbox">
           <Checkbox
             indeterminate={numSelected > 0 && numSelected < rowCount}
             checked={rowCount > 0 && numSelected === rowCount}
@@ -115,7 +115,7 @@ function EnhancedTableHead(props) {
         {headCells.map((headCell) => (
           <TableCell
             key={headCell.id}
-            align='left'
+            align="left"
             padding={headCell.disablePadding ? 'none' : 'default'}
             sortDirection={orderBy === headCell.id ? order : false}
           >
@@ -181,32 +181,32 @@ const EnhancedTableToolbar = (props) => {
       {numSelected > 0 ? (
         <Typography
           className={classes.title}
-          color='inherit'
-          variant='subtitle1'
-          component='div'
+          color="inherit"
+          variant="subtitle1"
+          component="div"
         >
           {numSelected} selected
         </Typography>
       ) : (
         <Typography
           className={classes.title}
-          variant='h6'
-          id='tableTitle'
-          component='div'
+          variant="h6"
+          id="tableTitle"
+          component="div"
         >
           Table Title
         </Typography>
       )}
 
       {numSelected > 0 ? (
-        <Tooltip title='Delete'>
-          <IconButton aria-label='delete'>
+        <Tooltip title="Delete">
+          <IconButton aria-label="delete">
             <DeleteIcon />
           </IconButton>
         </Tooltip>
       ) : (
-        <Tooltip title='Filter list'>
-          <IconButton aria-label='filter list'>
+        <Tooltip title="Filter list">
+          <IconButton aria-label="filter list">
             <FilterListIcon />
           </IconButton>
         </Tooltip>
@@ -307,9 +307,9 @@ export default function EnhancedTable() {
         <TableContainer>
           <Table
             className={classes.table}
-            aria-labelledby='tableTitle'
-            size='medium'
-            aria-label='enhanced table'
+            aria-labelledby="tableTitle"
+            size="medium"
+            aria-label="enhanced table"
           >
             <EnhancedTableHead
               classes={classes}
@@ -331,29 +331,29 @@ export default function EnhancedTable() {
                     <TableRow
                       hover
                       onClick={(event) => handleClick(event, row.customers)}
-                      role='checkbox'
+                      role="checkbox"
                       aria-checked={isItemSelected}
                       tabIndex={-1}
                       key={row.customers}
                       selected={isItemSelected}
                     >
-                      <TableCell padding='checkbox'>
+                      <TableCell padding="checkbox">
                         <Checkbox
                           checked={isItemSelected}
                           inputProps={{ 'aria-labelledby': labelId }}
                         />
                       </TableCell>
                       <TableCell
-                        component='th'
+                        component="th"
                         id={labelId}
-                        scope='row'
-                        padding='none'
+                        scope="row"
+                        padding="none"
                       >
                         {row.customers}
                       </TableCell>
-                      <TableCell align='left'>{row.contactName}</TableCell>
-                      <TableCell align='left'>${row.amount}</TableCell>
-                      <TableCell align='left'>{row.date}</TableCell>
+                      <TableCell align="left">{row.contactName}</TableCell>
+                      <TableCell align="left">${row.amount}</TableCell>
+                      <TableCell align="left">{row.date}</TableCell>
                     </TableRow>
                   );
                 })}
@@ -367,7 +367,7 @@ export default function EnhancedTable() {
         </TableContainer>
         <TablePagination
           rowsPerPageOptions={[5, 10, 25]}
-          component='div'
+          component="div"
           count={rows.length}
           rowsPerPage={rowsPerPage}
           page={page}
