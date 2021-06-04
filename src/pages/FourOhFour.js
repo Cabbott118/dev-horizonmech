@@ -35,7 +35,6 @@ export default function FourOhFour() {
           variant='outlined'
           color='secondary'
           onClick={onClick}
-          fullwidth
           style={{ marginTop: '10px' }}
           className={classes.button}
         >

@@ -37,7 +37,7 @@ export default function Home() {
       </div>
       <Grid
         container
-        direction='row'
+        direction='column'
         justify='center'
         alignItems='center'
         className={classes.homePageUnder}
