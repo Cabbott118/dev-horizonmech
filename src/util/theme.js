@@ -43,6 +43,15 @@ export default {
       background: '#d4d9dd',
       minHeight: '100vh',
     },
+    footer: {
+      backgroundColor: '#5d5c61',
+      padding: '10px',
+      marginTop: '30px',
+    },
+    footerItem: {
+      padding: '5px',
+    },
+    footerText: { color: '#ddd' },
     typography: {
       useNextVariants: true,
     },

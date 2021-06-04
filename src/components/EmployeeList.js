@@ -44,7 +44,6 @@ export default function EmployeeList() {
   useEffect(() => {
     dispatch(getEmployeeData());
   }, []);
-  console.log(data);
 
   return (
     <>

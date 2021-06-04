@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 // Components
 import EmployeeList from '../components/EmployeeList';
+import Footer from '../components/Footer';
 
 // MUI
 import Grid from '@material-ui/core/Grid';
@@ -44,6 +45,7 @@ export default function Home() {
       >
         <EmployeeList />
       </Grid>
+      <Footer />
     </>
   );
 }
