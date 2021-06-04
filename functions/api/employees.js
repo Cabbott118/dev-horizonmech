@@ -1,12 +1,23 @@
+const { db } = require('../util/admin');
+
 exports.getEmployeeDetails = (request, response) => {
   let employeeData = [];
-  db.doc(`/employees`)
+  db.collection(`employees`)
+    .orderBy('createdAt', 'asc')
     .get()
-    .then((doc) => {
-      if (doc.exists) {
-        employeeData = doc.data();
-        return response.json(employeeData);
-      }
+    .then((data) => {
+      data.forEach((doc) => {
+        employeeData.push({
+          employeeId: doc.id,
+          firstName: doc.data().firstName,
+          lastName: doc.data().lastName,
+          role: doc.data().role,
+          imageUrl: doc.data().imageUrl,
+          contactEmail: doc.data().contactEmail,
+          contactPhoneNumber: doc.data().contactPhoneNumber,
+        });
+      });
+      response.json(employeeData);
     })
     .catch((error) => {
       console.error(error);

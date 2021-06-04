@@ -2,8 +2,8 @@ export default {
   palette: {
     primary: {
       main: '#dd723c',
-      // main: '#1b1c2c',
-      contrastText: '#fff',
+      // main: '#333',
+      contrastText: '#333',
     },
     secondary: {
       main: '#3e5879',
@@ -15,28 +15,32 @@ export default {
     homePage: {
       // background: `url('/images/img-12.jpg') center center/cover no-repeat`,
       // boxShadow: 'inset 0 0 0 1000px rgba(0, 0, 0, 0.5)',
+      background: '#d4d9dd',
       minHeight: '100vh',
-      backgroundImage:
-        'linear-gradient(to top, #040308, #ad4a28, #dd723c, #fc7001, #dcb697, #9ba5ae, #3e5879, #020b1a)',
+      // Uncomment blow for gradient sunset/sunrise
+      // backgroundImage:
+      //   'linear-gradient(to top, #040308, #ad4a28, #dd723c, #fc7001, #dcb697, #9ba5ae, #3e5879, #020b1a)',
+    },
+    homePageUnder: {
+      background: '#fff',
     },
     registerPage: {
-      background: '#9ba5ae',
-      padding: '60px',
+      background: '#d4d9dd',
+      padding: '80px',
       minHeight: '100vh',
     },
     loginPage: {
-      background: '#9ba5ae',
-      padding: '60px',
+      background: '#d4d9dd',
+      padding: '80px',
       minHeight: '100vh',
     },
     dashboardPage: {
-      background: '#9ba5ae',
-      padding: '60px',
+      background: '#d4d9dd',
+      // padding: '60px',
       minHeight: '100vh',
     },
     fourOhFourPage: {
-      // background: '#2a262c',
-      background: '#9ba5ae',
+      background: '#d4d9dd',
       minHeight: '100vh',
     },
     typography: {

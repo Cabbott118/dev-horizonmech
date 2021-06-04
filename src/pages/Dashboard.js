@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 // Components
 import LoadingSpinner from '../components/LoadingSpinner';
 import UserInfo from '../components/UserInfo';
-import DataTable from '../components/DataTable';
 
 // MUI
 import Button from '@material-ui/core/Button';
@@ -51,11 +50,10 @@ export class Dashboard extends Component {
         className={classes.dashboardPage}
       >
         {userMarkUp}
-        <DataTable />
         <Button
           className={classes.button}
           variant='contained'
-          color='primary'
+          color='theme.palette.primary.contrastText'
           onClick={this.handleLogout}
         >
           Logout

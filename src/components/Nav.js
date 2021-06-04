@@ -47,11 +47,7 @@ export default function Nav() {
   return (
     <Fragment>
       <HideOnScroll>
-        <AppBar
-          position='fixed'
-          color='transparent'
-          style={{ boxShadow: 'none' }}
-        >
+        <AppBar position='fixed' color='default' style={{ boxShadow: 'none' }}>
           <Toolbar id='back-to-top-anchor'>
             <Container maxWidth='md' className={classes.navDisplayFlex}>
               <Link to={'/'}>

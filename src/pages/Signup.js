@@ -158,7 +158,7 @@ export class Signup extends Component {
               <Button
                 type='submit'
                 variant='contained'
-                color='primary'
+                color='theme.palette.primary.contrastText'
                 className={classes.button}
                 disabled={loading}
               >

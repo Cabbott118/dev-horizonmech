@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   linkText: {
     textDecoration: 'none',
     textTransform: 'none',
-    color: theme.palette.secondary.main,
+    color: theme.palette.primary.contrastText,
   },
   icon: {
     color: theme.palette.primary.contrastText,
